@@ -1,0 +1,65 @@
+.task-wraper {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    min-width: 50vw;
+    transform: translateX(-50%);
+    .header {
+        .title {
+            color: white;
+            font-weight: 700;
+            font-size: 50px;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            word-spacing: -10px;
+            margin-top: 0px;
+        }
+        .input-block {
+            height: 42px;
+            width: 100%;
+            display: flex;
+            input {
+                padding-left: 5px;
+                border-radius: 12px;
+                margin-right: 12px;
+                flex: 1;
+                &:active {
+                    outline: none;
+                }
+                &:focus {
+                    outline: none;
+                    border: 2px solid green;
+                }
+            }
+        }
+    }
+    .task-list {
+        width: 100%;
+        min-height: 400px;
+        background-color: white;
+        box-shadow: 0px 6px 12px 3px rgba(34, 60, 80, 0.2);
+        margin-top: 32px;
+        border-radius: 6px;
+        .task-block {
+            display:flex;
+            padding: 12px 8px;
+            border-bottom: 1px solid grey;
+            align-items: center;
+            p {
+                margin: 0px;
+                margin-bottom: 2px;
+                flex:1;
+                margin-left: 12px;
+            }
+            svg {
+                display: none;
+            }
+            &:hover {
+                svg {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
