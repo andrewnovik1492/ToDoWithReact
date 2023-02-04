@@ -19,6 +19,10 @@
             width: 100%;
             display: flex;
             input {
+                &.warning:focus{
+                    outline: none;
+                    border: 3px solid red;
+                }
                 padding-left: 5px;
                 border-radius: 12px;
                 margin-right: 12px;
@@ -33,6 +37,7 @@
             }
         }
     }
+    
     .task-list {
         width: 100%;
         min-height: 400px;
@@ -40,6 +45,13 @@
         box-shadow: 0px 6px 12px 3px rgba(34, 60, 80, 0.2);
         margin-top: 32px;
         border-radius: 6px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-container {
+            max-height: 400px;
+            overflow: auto;
+        }
         .task-block {
             display:flex;
             padding: 12px 8px;
@@ -53,13 +65,42 @@
             }
             svg {
                 display: none;
+                margin-left: 15px;
             }
             &:hover {
                 svg {
                     display: block;
                 }
             }
+            &.is-done {
+                p {
+                    text-decoration: line-through;
+                }
+            }
+            
+        }
+        .filter {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            // &.items {
+            //     margin-right: auto;
+            // }
+            .link {
+                display: flex;
+                gap: 5px;
+            }
+            // &.clear {
+            //     margin-left: auto;
+            // }
         }
     }
 
 }
+.hidden {
+    display: none !important;
+}
+
+
